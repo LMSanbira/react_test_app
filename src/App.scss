@@ -1,0 +1,17 @@
+.nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: solid gray 1px;
+  background-color: whitesmoke;
+  padding: 10px 30px;
+  nav {
+    display: flex;
+    div {
+      padding-left: 15px;
+      cursor: pointer;
+    }
+  }
+}

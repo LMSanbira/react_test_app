@@ -1,11 +1,15 @@
 import React from "react";
 import "./App.scss";
 import Nav from "./components/nav";
+import GemsDisplay from "./components/gemsDisplay";
 
 function App() {
   return (
     <React.Fragment>
-      <Nav></Nav>
+      <Nav />
+      <div className="container">
+        <GemsDisplay />
+      </div>
     </React.Fragment>
   );
 }

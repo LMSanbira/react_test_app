@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
+import axios from "axios";
 
 @inject("GemStore")
 @observer
@@ -8,6 +9,20 @@ class GemsDisplay extends Component {
     this.props.GemStore.addGem(this.gemName.value);
     this.gemName.value = "";
   };
+
+  componentDidMount() {
+    const { GemStore } = this.props;
+
+    axios
+      .get("http://localhost:5000/api/gems")
+      .then(function(response) {
+        console.log(response);
+        GemStore.setGems(response.data);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
 
   render() {
     const { GemStore } = this.props;

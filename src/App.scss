@@ -2,22 +2,40 @@
   padding: 30px;
 }
 
-.btn-send {
-  margin-top: 20px;
+.gem-input-container {
+  display: flex;
+}
+
+.btn-send,
+.gem-input-delete {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
-  height: 40px;
+  height: 30px;
   border: solid gray 1px;
   border-radius: 5px;
   background-color: whitesmoke;
   cursor: pointer;
 }
 
+.gem-input-delete {
+  margin-left: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
 input {
   font-size: 16px;
   padding: 5px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .nav-bar {

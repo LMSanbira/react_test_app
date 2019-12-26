@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
-import axios from "axios";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 
 @inject("GemStore")
 @observer
@@ -10,27 +12,17 @@ class GemsDisplay extends Component {
     this.state = { chosenGem: null };
   }
 
-  handleSubmit = e => {
-    this.props.GemStore.addGem(this.gemName.value);
-    this.gemName.value = "";
-  };
-
   componentDidMount() {
-    const { GemStore } = this.props;
-
-    axios
-      .get("http://localhost:5000/api/gems")
-      .then(function(response) {
-        console.log(response);
-        GemStore.setGems(response.data);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    this.props.GemStore.getGems();
   }
 
   changeToInput = id => {
     this.setState({ chosenGem: id });
+  };
+
+  handleSubmit = e => {
+    this.props.GemStore.addGem(this.gemName.value);
+    this.gemName.value = "";
   };
 
   handleGemChange = id => {
@@ -39,7 +31,6 @@ class GemsDisplay extends Component {
   };
 
   handleGemDelete = id => {
-    console.log("here");
     this.props.GemStore.deleteGem(id);
     this.setState({ chosenGem: null });
   };
@@ -48,15 +39,27 @@ class GemsDisplay extends Component {
     const { GemStore } = this.props;
     return (
       <React.Fragment>
-        <h1>There are {GemStore.gemCount} gems</h1>
-        <input
-          type="text"
-          placeholder="Add a gem"
-          ref={input => (this.gemName = input)}
-        />
-        <div className="btn-send" onClick={e => this.handleSubmit(e)}>
-          ADD
+        <Typography variant="h3" gutterBottom>
+          There are {GemStore.gemCount} gems
+        </Typography>
+        <div style={{ display: "flex", alineItems: "center" }}>
+          <TextField
+            id="outlined-basic"
+            label="Gem Name"
+            variant="outlined"
+            size="small"
+            inputProps={{ ref: input => (this.gemName = input) }}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={e => this.handleSubmit(e)}
+            style={{ marginLeft: "10px" }}
+          >
+            ADD
+          </Button>
         </div>
+
         <ul>
           {GemStore.gems.map(gem => {
             if (gem.id === this.state.chosenGem) {

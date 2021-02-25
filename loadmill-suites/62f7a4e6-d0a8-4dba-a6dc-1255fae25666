@@ -1,0 +1,44 @@
+{
+  conf: {
+    meta: {
+      description: 'sync me to git'
+    },
+    loginFlow: [],
+    useCookies: true,
+    parameters: [],
+    authenticationHeaders: [],
+    sharedLoginFlowDescription: 'New Load Test - Feb 25'
+  },
+  flows: [
+    {
+      order: 0,
+      conf: {
+        duration: 60000,
+        concurrency: 1,
+        requests: [
+          {
+            url: 'walla.com',
+            method: 'GET',
+            headers: [],
+            assert: [],
+            extract: [],
+            timeout: 60000,
+            expectedStatus: 'SUCCESS',
+            description: 'reqreq'
+          }
+        ],
+        meta: {
+          description: 'firstttt'
+        },
+        parameterPools: [],
+        targetedCountries: [],
+        iterationDelay: 1000,
+        cachePenetration: {},
+        rampUp: 60000,
+        skipLoginFlow: false,
+        parameters: []
+      },
+      runInCi: false
+    }
+  ]
+}

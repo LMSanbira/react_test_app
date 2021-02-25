@@ -27,7 +27,7 @@
             description: 'reqreq'
           },
           {
-            url: 'google.com',
+            url: 'arnon.com',
             method: 'GET',
             headers: [],
             assert: [],

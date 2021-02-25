@@ -27,7 +27,7 @@
             description: 'reqreq'
           },
           {
-            url: 'arnon.com/ggg',
+            url: 'rivi.com',
             method: 'GET',
             headers: [],
             assert: [],

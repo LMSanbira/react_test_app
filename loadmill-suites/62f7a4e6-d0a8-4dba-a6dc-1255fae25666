@@ -25,6 +25,16 @@
             timeout: 60000,
             expectedStatus: 'SUCCESS',
             description: 'reqreq'
+          },
+          {
+            url: 'google.com',
+            method: 'GET',
+            headers: [],
+            assert: [],
+            extract: [],
+            timeout: 60000,
+            expectedStatus: 'SUCCESS',
+            description: 'another req req'
           }
         ],
         meta: {

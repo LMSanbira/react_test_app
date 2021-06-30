@@ -74,7 +74,7 @@
         "concurrency": 5,
         "requests": [
           {
-            "url": "${blog_url}/ghost/signin/?12hhh",
+            "url": "${blog_url}/ghost/signin/?12",
             "method": "GET",
             "headers": [
               {

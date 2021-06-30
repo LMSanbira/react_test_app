@@ -71,10 +71,10 @@
       "order": 0,
       "conf": {
         "duration": 60000,
-        "concurrency": 1,
+        "concurrency": 5,
         "requests": [
           {
-            "url": "${blog_url}/ghost/signin/",
+            "url": "${blog_url}/ghost/signin/?1",
             "method": "GET",
             "headers": [
               {

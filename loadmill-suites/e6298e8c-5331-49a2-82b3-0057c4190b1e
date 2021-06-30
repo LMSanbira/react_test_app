@@ -18,7 +18,7 @@
         "concurrency": 5,
         "requests": [
           {
-            "url": "h",
+            "url": "hdfdafg",
             "method": "GET",
             "headers": [],
             "assert": [],

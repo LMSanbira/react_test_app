@@ -91,7 +91,7 @@
             "description": "🚪 Load login page "
           },
           {
-            "url": "${blog_url}/ghost/api/v0.1/authentication/token",
+            "url": "${blog_url}/ghost/api/v0.1/authentication/tokenuwth",
             "method": "POST",
             "headers": [
               {

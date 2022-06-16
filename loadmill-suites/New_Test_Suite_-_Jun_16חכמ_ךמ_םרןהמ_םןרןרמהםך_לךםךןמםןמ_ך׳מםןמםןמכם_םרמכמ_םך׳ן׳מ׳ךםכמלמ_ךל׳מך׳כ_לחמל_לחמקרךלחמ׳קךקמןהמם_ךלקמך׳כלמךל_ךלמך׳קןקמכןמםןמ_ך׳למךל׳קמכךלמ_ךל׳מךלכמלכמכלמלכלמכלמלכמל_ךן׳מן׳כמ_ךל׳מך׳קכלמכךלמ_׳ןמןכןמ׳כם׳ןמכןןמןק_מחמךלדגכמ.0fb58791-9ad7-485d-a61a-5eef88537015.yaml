@@ -1,0 +1,26 @@
+conf:
+  meta:
+    description: New Test Suite - Jun 16חכמ ךמ םרןהמ םןרןרמהםך לךםךןמםןמ ך׳מםןמםןמכם
+      םרמכמ םך׳ן׳מ׳ךםכמלמ ךל׳מך׳כ לחמל לחמקרךלחמ׳קךקמןהמם ךלקמך׳כלמךל
+      ךלמך׳קןקמכןמםןמ ך׳למךל׳קמכךלמ ךל׳מךלכמלכמכלמלכלמכלמלכמל ךן׳מן׳כמ
+      ךל׳מך׳קכלמכךלמ ׳ןמןכןמ׳כם׳ןמכןןמןק מחמךלדגכמ
+  parameters: []
+  useCookies: true
+  loginFlow: []
+  authenticationHeaders: []
+  parametersScope: SUITE
+flows:
+  - id: 040b5923-e06a-454a-8f6c-32a442394b24
+    order: 0
+    conf:
+      meta:
+        description: New Flow
+      requests:
+        
+        - method: GET
+          url: w
+
+    runInCi: false
+dependencies:
+  login:
+    id: c5cd26b6-04f7-4ba1-b046-8df79974daf9
